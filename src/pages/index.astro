@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+// Get recent articles from all collections
+const learn = await getCollection('learn');
+const careers = await getCollection('careers');
+const money = await getCollection('money');
+const rights = await getCollection('rights');
+const tools = await getCollection('tools');
+
+const allArticles = [...learn, ...careers, ...money, ...rights, ...tools]
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 9);
+---
+
+<Layout 
+  title="Sailor Success - Complete Merchant Navy Guide 2026"
+  description="Everything you need to join and succeed in the Merchant Navy. DNS courses, GME admission, shipping jobs, salaries, and seafarer rights."
+>
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+        Sailor Success
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-700 mb-4">
+        Complete Merchant Navy Career Guide
+      </p>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        From DNS/GME admission to shipping company jobs, salaries, and seafarer rights - everything you need to succeed at sea.
+      </p>
+    </section>
+
+    <!-- Category Cards -->
+    <section class="mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <a href="/learn" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">📚</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Learn</h2>
+          <p class="text-gray-600">DNS, GME, courses & exams</p>
+        </a>
+        
+        <a href="/careers" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">🚢</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Careers</h2>
+          <p class="text-gray-600">Jobs, companies & ranks</p>
+        </a>
+        
+        <a href="/money" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">💰</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Money</h2>
+          <p class="text-gray-600">Salaries, taxes & finances</p>
+        </a>
+        
+        <a href="/rights" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">⚖️</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Rights</h2>
+          <p class="text-gray-600">Legal, safety & welfare</p>
+        </a>
+        
+        <a href="/tools" class="group p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-xl transition-all">
+          <div class="text-4xl mb-4">🔧</div>
+          <h2 class="text-2xl font-bold mb-2 group-hover:text-blue-600">Tools</h2>
+          <p class="text-gray-600">Calculators & resources</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section>
+      <h2 class="text-3xl font-bold mb-8">Latest Articles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {allArticles.map(article => (
+          <a 
+            href={`/${article.collection}/${article.slug}`}
+            class="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 hover:shadow-xl transition-all"
+          >
+            <div class="text-sm text-blue-600 font-semibold mb-2 uppercase">
+              {article.collection}
+            </div>
+            <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 line-clamp-2">
+              {article.data.title}
+            </h3>
+            <p class="text-gray-600 mb-4 line-clamp-2">
+              {article.data.description}
+            </p>
+            <div class="flex items-center justify-between text-sm text-gray-500">
+              <span>{article.data.readTime} min read</span>
+              <span class="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
