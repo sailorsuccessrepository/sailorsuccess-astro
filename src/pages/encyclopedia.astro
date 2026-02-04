@@ -1,0 +1,229 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const careers = await getCollection('careers');
+const learn = await getCollection('learn');
+const money = await getCollection('money');
+const rights = await getCollection('rights');
+const tools = await getCollection('tools');
+
+const allArticles = [
+  ...careers.map(entry => ({ ...entry, category: 'careers', categoryLabel: 'Careers', icon: '🧭' })),
+  ...learn.map(entry => ({ ...entry, category: 'learn', categoryLabel: 'Learn', icon: '📚' })),
+  ...money.map(entry => ({ ...entry, category: 'money', categoryLabel: 'Money', icon: '💰' })),
+  ...rights.map(entry => ({ ...entry, category: 'rights', categoryLabel: 'Rights', icon: '⚖️' })),
+  ...tools.map(entry => ({ ...entry, category: 'tools', categoryLabel: 'Tools', icon: '🔧' }))
+].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categorizedArticles = {
+  careers,
+  learn,
+  money,
+  rights,
+  tools
+};
+
+const totalArticles = allArticles.length;
+---
+
+<BaseLayout 
+  title="Encyclopedia - Complete Maritime Knowledge Base | Sailor Success"
+  description={`Browse all ${totalArticles} articles on merchant navy careers, exams, salary, rights, and tools. India's most comprehensive maritime encyclopedia.`}
+>
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        📚 Sailor Success Encyclopedia
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">
+        Complete maritime knowledge base with <strong>{totalArticles} articles</strong> covering careers, exams, salary, rights, and tools.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <a href="#careers" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">🧭 Careers ({careers.length})</a>
+        <a href="#learn" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">📚 Learn ({learn.length})</a>
+        <a href="#money" class="px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition">💰 Money ({money.length})</a>
+        <a href="#rights" class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">⚖️ Rights ({rights.length})</a>
+        <a href="#tools" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition">🔧 Tools ({tools.length})</a>
+      </div>
+      
+      <!-- Search Box -->
+      <div class="max-w-2xl mx-auto">
+        <input 
+          type="search" 
+          id="encyclopedia-search" 
+          placeholder="Search all articles..." 
+          class="w-full px-6 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none text-lg"
+        />
+      </div>
+    </div>
+
+    <!-- Recently Added -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">🆕 Recently Added</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {allArticles.slice(0, 6).map(article => (
+          <a 
+            href={`/${article.category}/${article.slug}/`}
+            class="block p-6 border-2 border-gray-200 rounded-lg hover:border-blue-600 hover:shadow-lg transition"
+          >
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-3xl">{article.icon}</span>
+              <div>
+                <span class="text-xs font-semibold text-blue-600 uppercase">{article.categoryLabel}</span>
+                <h3 class="font-bold text-lg leading-tight">{article.data.title}</h3>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{article.data.description}</p>
+            <time class="text-xs text-gray-500 mt-2 block">
+              {new Date(article.data.pubDate).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-4xl">🧭</span>
+        <div>
+          <h2 class="text-3xl font-bold">Careers</h2>
+          <p class="text-gray-600">{careers.length} guides on joining merchant navy, companies, and career paths</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {careers.map(article => (
+          <a 
+            href={`/careers/${article.slug}/`}
+            class="block p-4 border border-gray-200 rounded-lg hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition"
+          >
+            <h3 class="font-semibold text-base mb-2 line-clamp-2">{article.data.title}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{article.data.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Learn Section -->
+    <section id="learn" class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-4xl">📚</span>
+        <div>
+          <h2 class="text-3xl font-bold">Learn</h2>
+          <p class="text-gray-600">{learn.length} articles on exams, courses, and technical knowledge</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {learn.map(article => (
+          <a 
+            href={`/learn/${article.slug}/`}
+            class="block p-4 border border-gray-200 rounded-lg hover:border-green-600 hover:bg-green-50 dark:hover:bg-green-900/20 transition"
+          >
+            <h3 class="font-semibold text-base mb-2 line-clamp-2">{article.data.title}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{article.data.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Money Section -->
+    <section id="money" class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-4xl">💰</span>
+        <div>
+          <h2 class="text-3xl font-bold">Money</h2>
+          <p class="text-gray-600">{money.length} resources on salary, tax, investments, and financial planning</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {money.map(article => (
+          <a 
+            href={`/money/${article.slug}/`}
+            class="block p-4 border border-gray-200 rounded-lg hover:border-yellow-600 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition"
+          >
+            <h3 class="font-semibold text-base mb-2 line-clamp-2">{article.data.title}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{article.data.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Rights Section -->
+    <section id="rights" class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-4xl">⚖️</span>
+        <div>
+          <h2 class="text-3xl font-bold">Rights</h2>
+          <p class="text-gray-600">{rights.length} guides on legal rights, contracts, and seafarer welfare</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {rights.map(article => (
+          <a 
+            href={`/rights/${article.slug}/`}
+            class="block p-4 border border-gray-200 rounded-lg hover:border-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition"
+          >
+            <h3 class="font-semibold text-base mb-2 line-clamp-2">{article.data.title}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{article.data.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="mb-16">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-4xl">🔧</span>
+        <div>
+          <h2 class="text-3xl font-bold">Tools</h2>
+          <p class="text-gray-600">{tools.length} calculators, checklists, and practical tools</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {tools.map(article => (
+          <a 
+            href={`/tools/${article.slug}/`}
+            class="block p-4 border border-gray-200 rounded-lg hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+          >
+            <h3 class="font-semibold text-base mb-2 line-clamp-2">{article.data.title}</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{article.data.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl p-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Can't Find What You're Looking For?</h2>
+      <p class="text-xl mb-6">Ask SailorGPT - India's first AI mentor built for seafarers</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://sailorsuccess.graphy.com/talk/mentor" class="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition">
+          🤖 Chat with SailorGPT
+        </a>
+        <a href="https://wa.me/919958110235?text=Hi%20Chief%2C%20I%20need%20guidance" class="px-8 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition">
+          💬 Talk to Chief Aseem
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Simple client-side search
+    const searchInput = document.getElementById('encyclopedia-search');
+    const allArticleLinks = document.querySelectorAll('section a[href*="/"]');
+    
+    searchInput?.addEventListener('input', (e) => {
+      const searchTerm = (e.target as HTMLInputElement).value.toLowerCase();
+      
+      allArticleLinks.forEach(link => {
+        const title = link.querySelector('h3')?.textContent?.toLowerCase() || '';
+        const description = link.querySelector('p')?.textContent?.toLowerCase() || '';
+        const matches = title.includes(searchTerm) || description.includes(searchTerm);
+        
+        (link as HTMLElement).style.display = matches ? 'block' : 'none';
+      });
+    });
+  </script>
+</BaseLayout>
