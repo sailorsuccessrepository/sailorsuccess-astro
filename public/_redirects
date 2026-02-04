@@ -1,0 +1,31 @@
+# Netlify Redirects for Sailor Success Encyclopedia
+# This file fixes 404 errors on Astro content collection routes
+
+# Fix www to non-www redirect (must be first)
+https://www.sailorsuccess.online/*  https://sailorsuccess.online/:splat  301!
+
+# Astro collection routes - serve nested index.html files
+/careers/*  /careers/:splat  200
+/learn/*    /learn/:splat    200
+/money/*    /money/:splat    200
+/rights/*   /rights/:splat   200
+/tools/*    /tools/:splat    200
+
+# Hub page redirects (optional - if trailing slash issue)
+/careers    /careers/  200
+/learn      /learn/    200
+/money      /money/    200
+/rights     /rights/   200
+/tools      /tools/    200
+
+# Legacy 404 fixes from GSC report
+/about.html           /about/         301
+/disclaimer.html      /terms.html     301
+/legal/               /terms.html     301
+/contact.html         /contact/       301
+/privacy.html         /privacy/       301
+/sailor-success-blog  /blog/          301
+/merch/               /                301
+
+# SPA fallback for Astro (must be last)
+/*  /index.html  200
