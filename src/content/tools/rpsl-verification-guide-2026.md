@@ -1,7 +1,7 @@
 ---
 title: "RPSL Verification Guide 2026: How to Check Approved Agencies"
 description: "Complete RPSL verification guide. How to verify RPSL license, check approved recruitment agencies, avoid fake agents. Protect yourself from scams."
-pubDate: "2026-02-02"
+pubDate: 2026-02-02
 category: "tools"
 tags: ["rpsl", "recruitment agencies", "dg shipping", "verification", "maritime scams"]
 author: "Sailor Success"

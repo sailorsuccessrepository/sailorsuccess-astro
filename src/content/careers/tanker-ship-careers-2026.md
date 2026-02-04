@@ -1,7 +1,7 @@
 ---
 title: "Tanker Ship Careers 2026: Oil, Chemical, LNG Tanker Jobs"
 description: "Complete guide to tanker shipping careers. Oil tankers, chemical tankers, LPG/LNG carriers. Salary, certifications, career path for Indian seafarers."
-pubDate: "2026-02-02"
+pubDate: 2026-02-02
 category: "careers"
 tags: ["tanker jobs", "oil tanker", "chemical tanker", "tanker salary", "tanker certification"]
 author: "Sailor Success"

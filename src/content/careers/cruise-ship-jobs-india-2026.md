@@ -1,7 +1,7 @@
 ---
 title: "Cruise Ship Jobs India 2026: Complete Career Guide"
 description: "How to get cruise ship jobs from India. Deck, engine, hospitality positions. Salary, companies hiring, eligibility, application process for Indian seafarers."
-pubDate: "2026-02-02"
+pubDate: 2026-02-02
 category: "careers"
 tags: ["cruise ship jobs", "cruise careers", "hospitality", "deck officer cruise"]
 author: "Sailor Success"

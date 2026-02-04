@@ -1,7 +1,7 @@
 ---
 title: "Passport for Seafarers Guide 2026: ECR, ECNR, Renewal"
 description: "Complete passport guide for Indian seafarers. ECR vs ECNR, tatkal, renewal, police verification, address change. All you need for maritime passport."
-pubDate: "2026-02-02"
+pubDate: 2026-02-02
 category: "tools"
 tags: ["passport", "seafarer documents", "ecr", "ecnr", "passport renewal"]
 author: "Sailor Success"

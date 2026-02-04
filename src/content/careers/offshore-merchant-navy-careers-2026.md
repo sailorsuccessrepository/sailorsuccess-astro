@@ -1,7 +1,7 @@
 ---
 title: "Offshore Merchant Navy Careers 2026: Oil Rigs, FPSO, OSV Jobs"
 description: "Complete guide to offshore maritime careers. Oil rig jobs, FPSO positions, OSV opportunities for Indian seafarers. Salary, eligibility, how to apply."
-pubDate: "2026-02-02"
+pubDate: 2026-02-02
 category: "careers"
 tags: ["offshore jobs", "oil rig", "FPSO", "OSV", "offshore salary"]
 author: "Sailor Success"

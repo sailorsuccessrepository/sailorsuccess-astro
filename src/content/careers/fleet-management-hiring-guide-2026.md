@@ -1,7 +1,7 @@
 ---
 title: "Fleet Management Hiring Guide 2026: Jobs, Salary, Application"
 description: "Complete Fleet Management Ltd hiring guide. Application process, salary packages, interview tips, career growth for Indian seafarers at Fleet Management."
-pubDate: "2026-02-02"
+pubDate: 2026-02-02
 category: "careers"
 tags: ["fleet management", "shipping companies", "maritime jobs", "fleet management salary"]
 author: "Sailor Success"
