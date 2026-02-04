@@ -4,7 +4,7 @@ description: "Detailed Merchant Navy salary structure for 2026. Know exact salar
 category: "money"
 tags: ["Merchant Navy Salary", "Seafarer Income", "Maritime Pay Scale", "Officer Salary"]
 author: "Sailor Success Team"
-publishDate: "2026-01-25"
+pubDate: 2026-01-25
 readTime: 14
 ---
 

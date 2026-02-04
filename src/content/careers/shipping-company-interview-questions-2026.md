@@ -4,7 +4,7 @@ description: "Most asked shipping company interview questions for cadets and off
 category: "careers"
 tags: ["Interview Questions", "Shipping Interview", "Maritime Jobs", "Cadet Interview"]
 author: "Sailor Success Team"
-publishDate: "2026-01-18"
+pubDate: 2026-01-18
 readTime: 18
 ---
 

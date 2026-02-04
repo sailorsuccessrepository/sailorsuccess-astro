@@ -4,7 +4,7 @@ description: "Master MEO Class 1 examination with our comprehensive guide coveri
 category: "learn"
 tags: ["MEO Class 1", "Chief Engineer", "DG Shipping Exam", "Marine Engineering"]
 author: "Sailor Success Team"
-publishDate: "2026-01-28"
+pubDate: 2026-01-28
 readTime: 18
 ---
 

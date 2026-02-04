@@ -4,7 +4,7 @@ description: "Everything about DNS (Diploma in Nautical Science) course - eligib
 category: "learn"
 tags: ["DNS Course", "Nautical Science", "Deck Cadet", "Pre-Sea Training"]
 author: "Sailor Success Team"
-publishDate: "2026-01-27"
+pubDate: 2026-01-27
 readTime: 16
 ---
 

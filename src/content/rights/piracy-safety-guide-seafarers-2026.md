@@ -4,7 +4,7 @@ description: "Updated piracy zones, high risk areas, seafarer safety protocols, 
 category: "rights"
 tags: ["Piracy", "Maritime Security", "Seafarer Safety", "High Risk Areas"]
 author: "Sailor Success Team"
-publishDate: "2026-01-20"
+pubDate: 2026-01-20
 readTime: 13
 ---
 

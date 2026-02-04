@@ -4,7 +4,7 @@ description: "IELTS requirements for Merchant Navy, band score needed, preparati
 category: "learn"
 tags: ["IELTS", "English Test", "Seafarer Requirements", "Maritime English"]
 author: "Sailor Success Team"
-publishDate: "2026-01-23"
+pubDate: 2026-01-23
 readTime: 12
 ---
 

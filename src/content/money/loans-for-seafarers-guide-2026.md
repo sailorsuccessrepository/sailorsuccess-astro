@@ -4,7 +4,7 @@ description: "Complete guide to loans for seafarers - home loans for NRIs, educa
 category: "money"
 tags: ["Seafarer Loans", "Home Loan NRI", "Education Loan", "Maritime Finance"]
 author: "Sailor Success Team"
-publishDate: "2026-01-19"
+pubDate: 2026-01-19
 readTime: 13
 ---
 

@@ -4,7 +4,7 @@ description: "Complete guide to NRI investments for seafarers - mutual funds, st
 category: "money"
 tags: ["NRI Investment", "Seafarer Finance", "Wealth Building", "Tax-Free Income"]
 author: "Sailor Success Team"
-publishDate: "2026-01-22"
+pubDate: 2026-01-22
 readTime: 15
 ---
 

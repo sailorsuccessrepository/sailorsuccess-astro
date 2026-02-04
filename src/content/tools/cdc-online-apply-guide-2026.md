@@ -4,7 +4,7 @@ description: "Apply for CDC (Continuous Discharge Certificate) online through DG
 category: "tools"
 tags: ["CDC Application", "DG Shipping", "Seafarer Documents", "CDC Online"]
 author: "Sailor Success Team"
-publishDate: "2026-01-26"
+pubDate: 2026-01-26
 readTime: 12
 ---
 

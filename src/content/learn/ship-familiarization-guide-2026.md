@@ -4,7 +4,7 @@ description: "Essential ship familiarization guide for cadets and officers. Safe
 category: "learn"
 tags: ["Ship Familiarization", "Joining Ship", "Safety Training", "New Joiner Guide"]
 author: "Sailor Success Team"
-publishDate: "2026-01-21"
+pubDate: 2026-01-21
 readTime: 14
 ---
 
