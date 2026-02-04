@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+
+const tools = await getCollection('tools');
+
+// Group by subcategory
+const grouped = tools.reduce((acc, post) => {
+  const subcategory = post.data.subcategory || 'General';
+  if (!acc[subcategory]) acc[subcategory] = [];
+  acc[subcategory].push(post);
+  return acc;
+}, {} as Record<string, any[]>);
+---
+
+<html>
+<head>
+  <title>Tools & Resources - Sailor Success</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h1>Tools & Resources</h1>
+  
+  {Object.entries(grouped).map(([subcategory, posts]) => (
+    <section>
+      <h2>{subcategory}</h2>
+      <ul>
+        {posts.map(post => (
+          <li>
+            <a href={`/tools/${post.slug}`}>{post.data.title}</a>
+            {post.data.description && <p>{post.data.description}</p>}
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</body>
+</html>
