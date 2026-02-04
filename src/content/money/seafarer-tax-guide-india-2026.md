@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "money"
 tags: ["seafarer tax", "NRI tax India", "merchant navy income tax", "182 day rule", "seafarer ITR"]
 featured: true
-readTime: "15 min read"
+readTime: 15
 ---
 
 # Seafarer Tax in India 2026: Complete Income Tax Guide

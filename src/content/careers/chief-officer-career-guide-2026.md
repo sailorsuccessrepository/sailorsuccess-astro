@@ -4,7 +4,7 @@ description: "Complete guide to Chief Officer/Chief Mate position in Merchant Na
 pubDate: 2026-02-02
 category: "careers"
 tags: ["chief officer", "chief mate", "deck officer", "cargo operations", "merchant navy career"]
-readTime: "14 min read"
+readTime: 14
 ---
 
 # Chief Officer in Merchant Navy 2026: Complete Career Guide

@@ -4,7 +4,7 @@ description: "Complete ETO (Electro-Technical Officer) career guide. Eligibility
 pubDate: 2026-02-02
 category: "careers"
 tags: ["ETO course", "electro-technical officer", "ETO salary", "ETO career", "electrical engineer merchant navy"]
-readTime: "10 min read"
+readTime: 10
 ---
 
 # ETO Course & Career Guide 2026: Electro-Technical Officer

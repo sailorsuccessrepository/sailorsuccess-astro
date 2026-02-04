@@ -4,7 +4,7 @@ description: "Step-by-step INDOS number registration process. Documents required
 pubDate: 2026-02-02
 category: "tools"
 tags: ["INDOS registration", "Indian seafarer registration", "DG Shipping INDOS", "INDOS number", "seafarer database"]
-readTime: "8 min read"
+readTime: 8
 ---
 
 # INDOS Registration Guide 2026: Step-by-Step Process

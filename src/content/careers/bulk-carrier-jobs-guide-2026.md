@@ -4,7 +4,7 @@ description: "Complete guide to bulk carrier careers. Dry bulk, grain, coal, iro
 pubDate: 2026-02-02
 category: "careers"
 tags: ["bulk carrier jobs", "dry bulk shipping", "capesize salary", "panamax jobs", "bulk carrier career"]
-readTime: "9 min read"
+readTime: 9
 ---
 
 # Bulk Carrier Jobs for Indian Seafarers: Career Guide 2026

@@ -4,7 +4,7 @@ description: "Complete guide to Third Engineer position in Merchant Navy. Learn 
 pubDate: 2026-02-02
 category: "careers"
 tags: ["third engineer", "marine engineer", "engine department", "main engine", "merchant navy career"]
-readTime: "13 min read"
+readTime: 13
 ---
 
 # Third Engineer in Merchant Navy 2026: Complete Career Guide

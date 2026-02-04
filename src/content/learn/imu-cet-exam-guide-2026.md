@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "learn"
 tags: ["IMU CET", "maritime entrance exam", "DNS admission", "GME admission", "merchant navy entrance"]
 featured: true
-readTime: "18 min read"
+readTime: 18
 ---
 
 # IMU CET 2026: Complete Guide to India's Maritime Entrance Exam

@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "tools"
 tags: ["pre-sea medical", "merchant navy medical", "seafarer fitness", "DG Shipping medical", "medical examination"]
 featured: false
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Pre-Sea Medical Test for Merchant Navy 2026

@@ -4,7 +4,7 @@ description: "Pass MEO Class 2 examination on first attempt. Complete syllabus, 
 pubDate: 2026-02-02
 category: "learn"
 tags: ["MEO Class 2", "Second Engineer exam", "2nd Engineer COC", "DG Shipping exam", "MEO II preparation"]
-readTime: "14 min read"
+readTime: 14
 ---
 
 # MEO Class 2 Examination Guide 2026: Your Path to Second Engineer

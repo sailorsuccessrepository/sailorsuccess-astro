@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "learn"
 tags: ["SIRE 2.0", "tanker inspection", "OCIMF", "vetting", "oil tanker"]
 featured: false
-readTime: "15 min read"
+readTime: 15
 ---
 
 # SIRE 2.0 Inspection Guide 2026

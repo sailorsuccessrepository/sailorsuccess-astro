@@ -4,7 +4,7 @@ description: "Graduate Marine Engineering (GME) course details. Eligibility crit
 pubDate: 2026-02-02
 category: "learn"
 tags: ["GME course", "Graduate Marine Engineering", "marine engineering career", "GME colleges India", "merchant navy after engineering"]
-readTime: "11 min read"
+readTime: 11
 ---
 
 # GME Course Guide 2026: Your Gateway to Marine Engineering Career

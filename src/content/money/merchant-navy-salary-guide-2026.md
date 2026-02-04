@@ -5,7 +5,7 @@ category: "money"
 tags: ["Merchant Navy Salary", "Seafarer Income", "Maritime Pay Scale", "Officer Salary"]
 author: "Sailor Success Team"
 publishDate: "2026-01-25"
-readTime: "14 min"
+readTime: 14
 ---
 
 Merchant Navy offers some of the highest salaries in India, with officers earning between ₹3 lakh to ₹15 lakh per month depending on rank, ship type, and company. This comprehensive guide covers exact salary figures, factors affecting pay, and how to maximize your maritime earnings in 2026.

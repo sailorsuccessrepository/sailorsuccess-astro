@@ -5,7 +5,7 @@ pubDate: "2026-02-02"
 category: "tools"
 tags: ["passport", "seafarer documents", "ecr", "ecnr", "passport renewal"]
 author: "Sailor Success"
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Passport for Seafarers Guide 2026: Everything You Need to Know

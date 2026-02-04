@@ -4,7 +4,7 @@ description: "Complete income tax guide for Indian seafarers. NRI status rules, 
 pubDate: 2026-02-02
 category: "money"
 tags: ["seafarer income tax", "NRI status seafarer", "182 days rule", "tax exemption India", "ITR filing seafarer"]
-readTime: "13 min read"
+readTime: 13
 ---
 
 # Income Tax for Indian Seafarers: Complete Guide 2026

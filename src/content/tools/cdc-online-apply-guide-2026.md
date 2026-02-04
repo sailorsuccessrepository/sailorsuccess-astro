@@ -5,7 +5,7 @@ category: "tools"
 tags: ["CDC Application", "DG Shipping", "Seafarer Documents", "CDC Online"]
 author: "Sailor Success Team"
 publishDate: "2026-01-26"
-readTime: "12 min"
+readTime: 12
 ---
 
 The Continuous Discharge Certificate (CDC) is a mandatory document for every Indian seafarer. Also known as Seaman Book, it records your sea service history and is required for joining any vessel. Here's your complete guide to applying for CDC online through the DG Shipping portal in 2026.

@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "rights"
 tags: ["Work Hours", "Rest Periods", "MLC 2006", "Seafarer Rights", "Fatigue Management"]
-readTime: "14 min read"
+readTime: 14
 ---
 
 # Seafarer Work Hours and Rest Periods: Your Rights Under MLC 2006

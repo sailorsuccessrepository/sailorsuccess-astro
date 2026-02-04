@@ -4,7 +4,7 @@ description: "Complete guide to medical repatriation for seafarers. MLC 2006 rig
 pubDate: 2026-02-02
 category: "rights"
 tags: ["medical repatriation", "seafarer sick pay", "MLC 2006 medical", "seafarer injury", "maritime medical rights"]
-readTime: "10 min read"
+readTime: 10
 ---
 
 # Medical Repatriation Guide for Seafarers 2026

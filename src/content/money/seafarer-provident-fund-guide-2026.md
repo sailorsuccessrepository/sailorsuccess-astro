@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "money"
 tags: ["Seafarer Provident Fund", "SPF", "Retirement Planning", "Seafarer Benefits", "Financial Planning"]
-readTime: "16 min read"
+readTime: 16
 ---
 
 # Seafarer Provident Fund (SPF): Complete Guide for Indian Mariners 2026

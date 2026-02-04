@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "learn"
 tags: ["COC", "Competency Certificate", "DG Shipping", "Marine Officer", "STCW"]
-readTime: "18 min read"
+readTime: 18
 ---
 
 # Competency Certificate (COC) for Indian Seafarers: Complete Guide 2026

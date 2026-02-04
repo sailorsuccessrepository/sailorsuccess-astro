@@ -5,7 +5,7 @@ pubDate: "2026-02-02"
 category: "careers"
 tags: ["tanker jobs", "oil tanker", "chemical tanker", "tanker salary", "tanker certification"]
 author: "Sailor Success"
-readTime: "15 min read"
+readTime: 15
 ---
 
 # Tanker Ship Careers 2026: Complete Guide to Oil, Chemical & Gas Carriers

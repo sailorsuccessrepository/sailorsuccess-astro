@@ -4,7 +4,7 @@ description: "Complete guide to container ship careers. Salary comparison, top l
 pubDate: 2026-02-02
 category: "careers"
 tags: ["container ship jobs", "liner shipping careers", "Maersk jobs", "MSC careers", "container vessel salary"]
-readTime: "10 min read"
+readTime: 10
 ---
 
 # Container Ship Jobs for Indian Seafarers: Career Guide 2026

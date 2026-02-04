@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "careers"
 tags: ["Ship Management", "Hiring Companies", "Indian Seafarers", "Maritime Jobs", "Shipping Companies"]
-readTime: "20 min read"
+readTime: 20
 ---
 
 # Top Ship Management Companies Hiring in India 2026: Complete Guide

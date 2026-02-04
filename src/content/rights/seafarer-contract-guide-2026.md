@@ -4,7 +4,7 @@ description: "Understanding SEA (Seafarer Employment Agreement). Mandatory claus
 pubDate: 2026-02-02
 category: "rights"
 tags: ["seafarer contract", "SEA agreement", "MLC 2006 contract", "seafarer rights", "employment agreement"]
-readTime: "11 min read"
+readTime: 11
 ---
 
 # Seafarer Employment Contract Guide: Know Your Rights 2026

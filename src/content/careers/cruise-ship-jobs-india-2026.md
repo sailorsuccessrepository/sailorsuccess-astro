@@ -5,7 +5,7 @@ pubDate: "2026-02-02"
 category: "careers"
 tags: ["cruise ship jobs", "cruise careers", "hospitality", "deck officer cruise"]
 author: "Sailor Success"
-readTime: "14 min read"
+readTime: 14
 ---
 
 # Cruise Ship Jobs India 2026: Complete Career Guide

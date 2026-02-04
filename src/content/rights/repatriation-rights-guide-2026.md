@@ -4,7 +4,7 @@ description: "Complete guide to seafarer repatriation rights under MLC 2006. Lea
 pubDate: 2026-02-02
 category: "rights"
 tags: ["repatriation", "MLC 2006", "seafarer rights", "maritime law", "sign off"]
-readTime: "11 min read"
+readTime: 11
 ---
 
 # Seafarer Repatriation Rights 2026: Complete Guide

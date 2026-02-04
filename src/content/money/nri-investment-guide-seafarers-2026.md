@@ -5,7 +5,7 @@ category: "money"
 tags: ["NRI Investment", "Seafarer Finance", "Wealth Building", "Tax-Free Income"]
 author: "Sailor Success Team"
 publishDate: "2026-01-22"
-readTime: "15 min"
+readTime: 15
 ---
 
 Seafarers earning tax-free income have a golden opportunity to build significant wealth. But NRI status comes with specific investment rules and restrictions. This comprehensive guide covers the best investment options, tax implications, and wealth-building strategies for Indian seafarers in 2026.

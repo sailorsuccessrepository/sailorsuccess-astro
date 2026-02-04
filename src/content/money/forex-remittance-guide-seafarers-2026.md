@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "money"
 tags: ["Forex", "Remittance", "NRE Account", "Money Transfer", "Seafarer Finance"]
-readTime: "16 min read"
+readTime: 16
 ---
 
 # Forex and Remittance Guide for Indian Seafarers 2026

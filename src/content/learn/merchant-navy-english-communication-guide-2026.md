@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "learn"
 tags: ["maritime English", "SMCP", "seafarer communication", "merchant navy interview", "radio communication"]
 featured: false
-readTime: "14 min read"
+readTime: 14
 ---
 
 # English Communication for Merchant Navy 2026

@@ -4,7 +4,7 @@ description: "Complete guide to Master Foreign Going examination. Learn about sy
 pubDate: 2026-02-02
 category: "learn"
 tags: ["master fg", "captain certificate", "master mariner", "dg shipping exams", "deck officer exam"]
-readTime: "14 min read"
+readTime: 14
 ---
 
 # Master (FG) Examination 2026: Complete Guide

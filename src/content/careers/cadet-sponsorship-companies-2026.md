@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "careers"
 tags: ["cadet sponsorship", "shipping company", "merchant navy training", "sponsored cadets", "maritime careers"]
 featured: true
-readTime: "14 min read"
+readTime: 14
 ---
 
 # Cadet Sponsorship Companies in India 2026

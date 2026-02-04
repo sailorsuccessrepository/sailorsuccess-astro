@@ -4,7 +4,7 @@ description: "Complete guide to Second Engineer position in Merchant Navy. Learn
 pubDate: 2026-02-02
 category: "careers"
 tags: ["second engineer", "marine engineer", "MEO class 2", "main engine", "merchant navy career"]
-readTime: "14 min read"
+readTime: 14
 ---
 
 # Second Engineer in Merchant Navy 2026: Complete Career Guide

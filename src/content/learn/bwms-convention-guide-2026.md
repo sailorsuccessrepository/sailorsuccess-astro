@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "learn"
 tags: ["BWMS", "ballast water", "maritime environment", "D-2 standard", "seafarer training"]
 featured: false
-readTime: "13 min read"
+readTime: 13
 ---
 
 # Ballast Water Management Convention 2026

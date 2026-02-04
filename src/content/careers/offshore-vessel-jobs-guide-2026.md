@@ -4,7 +4,7 @@ description: "Complete guide to offshore vessel careers - supply vessels, anchor
 pubDate: 2026-02-02
 category: "careers"
 tags: ["offshore jobs", "OSV careers", "AHTS salary", "PSV jobs", "offshore India", "equal time rotation"]
-readTime: "11 min read"
+readTime: 11
 ---
 
 # Offshore Vessel Jobs for Indian Seafarers: Career Guide 2026

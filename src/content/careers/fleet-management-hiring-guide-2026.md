@@ -5,7 +5,7 @@ pubDate: "2026-02-02"
 category: "careers"
 tags: ["fleet management", "shipping companies", "maritime jobs", "fleet management salary"]
 author: "Sailor Success"
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Fleet Management Ltd Hiring Guide 2026: Complete Career Information

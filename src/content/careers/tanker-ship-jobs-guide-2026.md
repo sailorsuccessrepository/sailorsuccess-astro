@@ -4,7 +4,7 @@ description: "Complete guide to tanker ship careers - oil tankers, chemical tank
 pubDate: 2026-02-02
 category: "careers"
 tags: ["tanker jobs", "oil tanker salary", "chemical tanker career", "gas carrier jobs", "tanker endorsement", "merchant navy tanker"]
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Tanker Ship Jobs for Indian Seafarers: Complete Career Guide 2026

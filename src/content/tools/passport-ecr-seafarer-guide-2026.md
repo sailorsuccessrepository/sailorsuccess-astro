@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "tools"
 tags: ["seafarer passport", "ECR non-ECR", "passport application", "merchant navy documents", "ECNR"]
 featured: false
-readTime: "11 min read"
+readTime: 11
 ---
 
 # Passport for Seafarers 2026: Complete Guide

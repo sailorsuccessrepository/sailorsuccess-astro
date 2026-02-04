@@ -4,7 +4,7 @@ description: "Complete guide to banking for Indian seafarers. Learn about NRE vs
 pubDate: 2026-02-02
 category: "money"
 tags: ["seafarer banking", "NRE account", "NRO account", "forex", "salary account"]
-readTime: "13 min read"
+readTime: 13
 ---
 
 # Best Bank Accounts for Seafarers 2026: Complete Guide

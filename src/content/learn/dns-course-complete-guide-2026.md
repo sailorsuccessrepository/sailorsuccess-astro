@@ -5,7 +5,7 @@ category: "learn"
 tags: ["DNS Course", "Nautical Science", "Deck Cadet", "Pre-Sea Training"]
 author: "Sailor Success Team"
 publishDate: "2026-01-27"
-readTime: "16 min"
+readTime: 16
 ---
 
 The Diploma in Nautical Science (DNS) is the premier pathway to becoming a Deck Officer in the Indian Merchant Navy. This 3-year diploma program prepares you for a career navigating vessels across the world's oceans. Here's your comprehensive guide to DNS course admission, training, and career prospects in 2026.

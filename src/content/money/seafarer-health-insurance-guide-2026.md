@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "money"
 tags: ["seafarer health insurance", "maritime insurance", "NRI insurance", "medical coverage", "seafarer benefits"]
 featured: false
-readTime: "13 min read"
+readTime: 13
 ---
 
 # Health Insurance for Seafarers 2026

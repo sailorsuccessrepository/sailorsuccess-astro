@@ -4,7 +4,7 @@ description: "Complete guide to joining Synergy Marine from India. Learn about f
 pubDate: 2026-02-02
 category: "careers"
 tags: ["synergy marine", "shipping companies", "maritime jobs", "tanker jobs", "recruitment"]
-readTime: "10 min read"
+readTime: 10
 ---
 
 # Synergy Marine Jobs in India 2026: Complete Hiring Guide

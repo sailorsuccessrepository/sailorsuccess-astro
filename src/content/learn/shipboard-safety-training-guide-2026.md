@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "learn"
 tags: ["Shipboard Safety", "Safety Drills", "SOLAS", "Maritime Safety", "Emergency Procedures"]
-readTime: "20 min read"
+readTime: 20
 ---
 
 # Shipboard Safety Training: Essential Drills and Procedures for Seafarers 2026

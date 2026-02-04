@@ -4,7 +4,7 @@ description: "Complete mental health resource for seafarers. Dealing with isolat
 pubDate: 2026-02-02
 category: "rights"
 tags: ["seafarer mental health", "depression at sea", "isolation seafarer", "maritime helpline", "seafarer wellbeing"]
-readTime: "11 min read"
+readTime: 11
 ---
 
 # Mental Health Guide for Seafarers: You're Not Alone

@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "learn"
 tags: ["MEO Class 4", "Oral Examination", "DG Shipping", "Marine Engineer", "Competency Certificate"]
-readTime: "18 min read"
+readTime: 18
 ---
 
 # MEO Class 4 Oral Examination: Complete Preparation Guide 2026

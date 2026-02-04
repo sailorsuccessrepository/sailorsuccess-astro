@@ -5,7 +5,7 @@ category: "money"
 tags: ["Seafarer Loans", "Home Loan NRI", "Education Loan", "Maritime Finance"]
 author: "Sailor Success Team"
 publishDate: "2026-01-19"
-readTime: "13 min"
+readTime: 13
 ---
 
 Seafarers often need loans for homes, education, or emergencies. Understanding loan options, NRI eligibility, and documentation requirements helps you get the best deals. Here's your comprehensive guide to loans for Indian seafarers in 2026.

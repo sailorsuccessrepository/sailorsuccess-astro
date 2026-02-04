@@ -5,7 +5,7 @@ category: "learn"
 tags: ["Ship Familiarization", "Joining Ship", "Safety Training", "New Joiner Guide"]
 author: "Sailor Success Team"
 publishDate: "2026-01-21"
-readTime: "14 min"
+readTime: 14
 ---
 
 Ship familiarization is mandatory under STCW and ISM Code when joining any vessel. Within the first 24 hours, you must understand the ship's safety systems, emergency procedures, and your responsibilities. This comprehensive guide ensures you complete all familiarization requirements effectively.

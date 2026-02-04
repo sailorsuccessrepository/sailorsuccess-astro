@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "careers"
 tags: ["LNG Careers", "Gas Carrier", "Maritime Jobs", "LNG Training", "High Salary"]
-readTime: "18 min read"
+readTime: 18
 ---
 
 # LNG Ship Officer Careers: Complete Guide for Indian Seafarers 2026

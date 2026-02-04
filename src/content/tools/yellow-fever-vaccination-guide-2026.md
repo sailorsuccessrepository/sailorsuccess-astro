@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "tools"
 tags: ["Yellow Fever", "Seafarer Vaccination", "Travel Health", "Maritime Medical", "CDC Requirements"]
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Yellow Fever Vaccination for Seafarers: Complete Guide 2026

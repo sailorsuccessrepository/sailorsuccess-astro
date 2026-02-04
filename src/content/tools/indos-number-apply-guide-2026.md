@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "tools"
 tags: ["INDOS", "seafarer registration", "DG Shipping", "merchant navy documents", "online application"]
 featured: false
-readTime: "10 min read"
+readTime: 10
 ---
 
 # INDOS Number Online Application Guide 2026

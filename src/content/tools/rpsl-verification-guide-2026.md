@@ -5,7 +5,7 @@ pubDate: "2026-02-02"
 category: "tools"
 tags: ["rpsl", "recruitment agencies", "dg shipping", "verification", "maritime scams"]
 author: "Sailor Success"
-readTime: "10 min read"
+readTime: 10
 ---
 
 # RPSL Verification Guide 2026: Protect Yourself from Fake Recruitment Agencies

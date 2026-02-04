@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "rights"
 tags: ["Wage Claims", "Seafarer Rights", "Unpaid Salary", "MLC 2006", "ITF"]
-readTime: "16 min read"
+readTime: 16
 ---
 
 # Seafarer Wage Claims: How to Recover Unpaid Salaries in India 2026

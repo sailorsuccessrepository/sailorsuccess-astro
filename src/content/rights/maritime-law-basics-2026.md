@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "rights"
 tags: ["maritime law", "seafarer rights", "MLC 2006", "shipping law", "seafarer contracts"]
 featured: false
-readTime: "14 min read"
+readTime: 14
 ---
 
 # Maritime Law Basics for Indian Seafarers 2026

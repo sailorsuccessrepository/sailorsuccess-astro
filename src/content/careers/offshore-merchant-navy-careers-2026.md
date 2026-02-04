@@ -5,7 +5,7 @@ pubDate: "2026-02-02"
 category: "careers"
 tags: ["offshore jobs", "oil rig", "FPSO", "OSV", "offshore salary"]
 author: "Sailor Success"
-readTime: "13 min read"
+readTime: 13
 ---
 
 # Offshore Merchant Navy Careers 2026: Complete Guide to Oil Rig, FPSO & OSV Jobs

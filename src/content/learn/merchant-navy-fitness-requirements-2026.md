@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "learn"
 tags: ["merchant navy fitness", "physical requirements", "maritime health", "seafarer fitness", "pre-sea fitness"]
 featured: false
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Merchant Navy Physical Fitness Requirements 2026

@@ -5,7 +5,7 @@ category: "careers"
 tags: ["Interview Questions", "Shipping Interview", "Maritime Jobs", "Cadet Interview"]
 author: "Sailor Success Team"
 publishDate: "2026-01-18"
-readTime: "18 min"
+readTime: 18
 ---
 
 Cracking shipping company interviews requires preparation in technical knowledge, HR questions, and situational scenarios. This comprehensive guide covers the top 50 questions asked by major shipping companies with expert answers.

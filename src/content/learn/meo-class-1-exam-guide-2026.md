@@ -5,7 +5,7 @@ category: "learn"
 tags: ["MEO Class 1", "Chief Engineer", "DG Shipping Exam", "Marine Engineering"]
 author: "Sailor Success Team"
 publishDate: "2026-01-28"
-readTime: "18 min"
+readTime: 18
 ---
 
 The MEO Class 1 Certificate of Competency represents the pinnacle of marine engineering qualification in India. This exam certifies you to serve as Chief Engineer on vessels of unlimited propulsion power. Here's everything you need to know to crack this challenging examination in 2026.

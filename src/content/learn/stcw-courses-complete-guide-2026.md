@@ -4,7 +4,7 @@ description: "Complete guide to STCW courses for Indian seafarers. Basic safety,
 pubDate: 2026-02-02
 category: "learn"
 tags: ["STCW courses", "STCW certificates", "maritime safety training", "PSSR course", "FPFF course"]
-readTime: "12 min read"
+readTime: 12
 ---
 
 # STCW Courses Complete Guide 2026

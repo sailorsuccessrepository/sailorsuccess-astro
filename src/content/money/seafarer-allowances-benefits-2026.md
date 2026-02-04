@@ -4,7 +4,7 @@ description: "Complete guide to seafarer allowances including leave pay, overtim
 pubDate: 2026-02-02
 category: "money"
 tags: ["seafarer allowances", "maritime salary", "seafarer benefits", "leave pay", "overtime pay"]
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Seafarer Allowances and Benefits 2026: Complete Guide

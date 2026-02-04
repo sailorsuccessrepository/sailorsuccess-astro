@@ -4,7 +4,7 @@ description: "Complete interview preparation for shipping company interviews. Co
 pubDate: 2026-02-02
 category: "learn"
 tags: ["seafarer interview", "shipping interview questions", "maritime job interview", "deck officer interview", "marine engineer interview"]
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Seafarer Interview Preparation: Complete Guide 2026

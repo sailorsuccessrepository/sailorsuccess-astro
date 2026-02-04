@@ -5,7 +5,7 @@ pubDate: 2026-02-02
 author: "Sailor Success Team"
 category: "careers"
 tags: ["Cruise Ship Jobs", "Chef Career", "Hotel Department", "Cruise Lines", "Maritime Hospitality"]
-readTime: "18 min read"
+readTime: 18
 ---
 
 # Cruise Ship Chef Jobs for Indians: Complete Career Guide 2026

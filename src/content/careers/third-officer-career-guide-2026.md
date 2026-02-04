@@ -4,7 +4,7 @@ description: "Complete guide to becoming a Third Officer in Indian Merchant Navy
 pubDate: 2026-02-02
 category: "careers"
 tags: ["third officer", "deck officer", "merchant navy career", "navigation", "watchkeeping", "OOW"]
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Third Officer in Merchant Navy 2026: Complete Career Guide

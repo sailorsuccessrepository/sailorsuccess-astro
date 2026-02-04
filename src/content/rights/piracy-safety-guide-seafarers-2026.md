@@ -5,7 +5,7 @@ category: "rights"
 tags: ["Piracy", "Maritime Security", "Seafarer Safety", "High Risk Areas"]
 author: "Sailor Success Team"
 publishDate: "2026-01-20"
-readTime: "13 min"
+readTime: 13
 ---
 
 Maritime piracy remains a real threat for seafarers in certain regions. Understanding high-risk areas, company obligations, and safety protocols can save your life. This guide covers current piracy hotspots, your rights, and essential safety measures.

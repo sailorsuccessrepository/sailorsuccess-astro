@@ -4,7 +4,7 @@ description: "Complete guide to joining Bernhard Schulte Shipmanagement from Ind
 pubDate: 2026-02-02
 category: "careers"
 tags: ["BSM", "bernhard schulte", "shipping companies", "maritime jobs", "recruitment"]
-readTime: "10 min read"
+readTime: 10
 ---
 
 # BSM (Bernhard Schulte) Jobs in India 2026: Complete Hiring Guide

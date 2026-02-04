@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "careers"
 tags: ["shore jobs", "maritime careers", "ex-seafarer jobs", "port jobs", "shipping company jobs"]
 featured: true
-readTime: "15 min read"
+readTime: 15
 ---
 
 # Merchant Navy Shore Jobs in India 2026

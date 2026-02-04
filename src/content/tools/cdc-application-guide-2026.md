@@ -4,7 +4,7 @@ description: "Step-by-step CDC (Continuous Discharge Certificate) application pr
 pubDate: 2026-02-02
 category: "tools"
 tags: ["CDC application", "Continuous Discharge Certificate", "CDC India", "seaman book India", "CDC renewal"]
-readTime: "9 min read"
+readTime: 9
 ---
 
 # CDC Application Guide 2026: Your Gateway to Sea Career

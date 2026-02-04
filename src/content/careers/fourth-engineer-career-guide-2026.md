@@ -4,7 +4,7 @@ description: "Complete guide to Fourth Engineer position in Indian Merchant Navy
 pubDate: 2026-02-02
 category: "careers"
 tags: ["fourth engineer", "marine engineer", "engine department", "merchant navy career", "machinery maintenance"]
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Fourth Engineer in Merchant Navy 2026: Complete Career Guide

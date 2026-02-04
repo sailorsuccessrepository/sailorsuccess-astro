@@ -4,7 +4,7 @@ description: "Complete guide to Mate/Second Mate FG examination by DG Shipping. 
 pubDate: 2026-02-02
 category: "learn"
 tags: ["mate fg", "second mate", "dg shipping exams", "deck officer exam", "competency certificate"]
-readTime: "15 min read"
+readTime: 15
 ---
 
 # Mate (FG) Examination 2026: Complete Preparation Guide

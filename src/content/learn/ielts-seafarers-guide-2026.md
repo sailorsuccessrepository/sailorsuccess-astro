@@ -5,7 +5,7 @@ category: "learn"
 tags: ["IELTS", "English Test", "Seafarer Requirements", "Maritime English"]
 author: "Sailor Success Team"
 publishDate: "2026-01-23"
-readTime: "12 min"
+readTime: 12
 ---
 
 English proficiency is increasingly important for international seafaring careers. Many shipping companies and flag states now require IELTS or equivalent tests. Here's your complete guide to English proficiency requirements for seafarers in 2026.

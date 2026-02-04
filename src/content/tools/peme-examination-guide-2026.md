@@ -4,7 +4,7 @@ description: "Complete guide to Pre-Employment Medical Examination (PEME) for me
 pubDate: 2026-02-02
 category: "tools"
 tags: ["PEME", "medical examination", "seafarer medical", "fitness certificate", "merchant navy medical"]
-readTime: "12 min read"
+readTime: 12
 ---
 
 # PEME Medical Examination for Seafarers 2026: Complete Guide

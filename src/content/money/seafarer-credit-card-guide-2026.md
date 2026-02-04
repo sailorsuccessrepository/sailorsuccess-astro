@@ -6,7 +6,7 @@ author: "Sailor Success Team"
 category: "money"
 tags: ["seafarer credit card", "NRI credit card", "forex cards", "travel credit card", "merchant navy banking"]
 featured: false
-readTime: "12 min read"
+readTime: 12
 ---
 
 # Best Credit Cards for Indian Seafarers 2026

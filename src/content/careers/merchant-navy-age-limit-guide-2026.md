@@ -4,7 +4,7 @@ description: "Complete age limit guide for merchant navy entry. Age criteria for
 pubDate: 2026-02-02
 category: "careers"
 tags: ["merchant navy age limit", "DNS age limit", "GME age criteria", "cadet age requirement", "maritime career age"]
-readTime: "8 min read"
+readTime: 8
 ---
 
 # Merchant Navy Age Limit Guide 2026: Know Your Eligibility
