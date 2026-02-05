@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const matches = careers.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('rank') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('officer') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('engineer')
+);
+---
+
+<html>
+  <head>
+    <title>Ranks in Merchant Navy</title>
+  </head>
+  <body>
+    <h1>Ranks in Merchant Navy</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/careers/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>Explore career guides for rank information.</p>
+    )}
+  </body>
+</html>

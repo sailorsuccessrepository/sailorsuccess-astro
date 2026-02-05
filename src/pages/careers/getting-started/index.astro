@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const matches = careers.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('start') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('how to join') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('10th') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('12th')
+);
+---
+
+<html>
+  <head>
+    <title>Getting Started in Merchant Navy</title>
+  </head>
+  <body>
+    <h1>Getting Started in Merchant Navy</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/careers/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>Explore career paths to get started.</p>
+    )}
+  </body>
+</html>

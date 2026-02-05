@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const matches = careers.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('transition')
+);
+---
+
+<html>
+  <head>
+    <title>Career Transitions</title>
+  </head>
+  <body>
+    <h1>Career Transitions</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/careers/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No transition articles found. Explore career paths above.</p>
+    )}
+  </body>
+</html>

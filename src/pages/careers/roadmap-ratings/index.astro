@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const matches = careers.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('rating') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('gp rating')
+);
+---
+
+<html>
+  <head>
+    <title>Ratings Career Roadmap</title>
+  </head>
+  <body>
+    <h1>Ratings Career Roadmap</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/careers/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No ratings articles found.</p>
+    )}
+  </body>
+</html>

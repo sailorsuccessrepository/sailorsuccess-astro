@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const matches = careers.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('dg') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('institute') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('shipping')
+);
+---
+
+<html>
+  <head>
+    <title>DG Shipping Approved Institutes</title>
+  </head>
+  <body>
+    <h1>DG Shipping Approved Institutes</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/careers/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No institute guides found.</p>
+    )}
+  </body>
+</html>

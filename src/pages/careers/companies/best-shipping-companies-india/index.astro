@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const matches = careers.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('company') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('shipping') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('maersk') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('anglo')
+);
+---
+
+<html>
+  <head>
+    <title>Best Shipping Companies in India</title>
+  </head>
+  <body>
+    <h1>Best Shipping Companies in India</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/careers/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No company articles found.</p>
+    )}
+  </body>
+</html>

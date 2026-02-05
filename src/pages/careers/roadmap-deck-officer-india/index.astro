@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const matches = careers.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('deck') || 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('officer')
+);
+---
+
+<html>
+  <head>
+    <title>Deck Officer India Career Roadmap</title>
+  </head>
+  <body>
+    <h1>Deck Officer India Career Roadmap</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/careers/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No matching career articles found.</p>
+    )}
+  </body>
+</html>

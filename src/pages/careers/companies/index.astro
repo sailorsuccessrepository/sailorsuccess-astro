@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const matches = careers.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('company') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('shipping')
+);
+---
+
+<html>
+  <head>
+    <title>Shipping Companies</title>
+  </head>
+  <body>
+    <h1>Shipping Companies</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/careers/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No company articles found.</p>
+    )}
+  </body>
+</html>

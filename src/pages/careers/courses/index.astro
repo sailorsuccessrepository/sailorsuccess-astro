@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const learn = await getCollection('learn');
+
+const allCourses = [...careers, ...learn].filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('course') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('training')
+);
+---
+
+<html>
+  <head>
+    <title>Courses & Training</title>
+  </head>
+  <body>
+    <h1>Courses & Training</h1>
+    {allCourses.length ? (
+      <ul>
+        {allCourses.map(post => (
+          <li><a href={`/${post.collection || 'careers'}/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No course articles found yet.</p>
+    )}
+  </body>
+</html>

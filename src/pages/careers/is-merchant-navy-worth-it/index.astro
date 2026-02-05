@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const matches = careers.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('worth') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('merchant navy')
+);
+---
+
+<html>
+  <head>
+    <title>Is Merchant Navy Worth It?</title>
+  </head>
+  <body>
+    <h1>Is Merchant Navy Worth It?</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/careers/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>Explore career guides and salary information to decide.</p>
+    )}
+  </body>
+</html>
