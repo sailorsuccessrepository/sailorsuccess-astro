@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+
+const money = await getCollection('money');
+const matches = money.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('salary') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('structure')
+);
+---
+
+<html>
+  <head>
+    <title>Merchant Navy Salary Structure India</title>
+  </head>
+  <body>
+    <h1>Merchant Navy Salary Structure India</h1>
+    <p>Placeholder content. Related salary guides:</p>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/money/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>Explore salary information.</p>
+    )}
+  </body>
+</html>

@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+
+const money = await getCollection('money');
+const matches = money.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('invest')
+);
+---
+
+<html>
+  <head>
+    <title>Investments for Seafarers</title>
+  </head>
+  <body>
+    <h1>Investments for Seafarers</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/money/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No investment guides found yet.</p>
+    )}
+  </body>
+</html>

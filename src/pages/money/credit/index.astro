@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+const money = await getCollection('money');
+const matches = money.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('credit') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('card')
+);
+---
+
+<html>
+  <head>
+    <title>Credit for Seafarers</title>
+  </head>
+  <body>
+    <h1>Credit for Seafarers</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/money/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No credit guides found yet.</p>
+    )}
+  </body>
+</html>

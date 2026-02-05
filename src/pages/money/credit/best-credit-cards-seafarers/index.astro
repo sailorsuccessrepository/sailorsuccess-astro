@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+
+const money = await getCollection('money');
+const matches = money.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('credit') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('card')
+);
+---
+
+<html>
+  <head>
+    <title>Best Credit Cards for Seafarers</title>
+  </head>
+  <body>
+    <h1>Best Credit Cards for Seafarers</h1>
+    <p>Placeholder content. Related credit guides:</p>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/money/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>Explore credit resources.</p>
+    )}
+  </body>
+</html>

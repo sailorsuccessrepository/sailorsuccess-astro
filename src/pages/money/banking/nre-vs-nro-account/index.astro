@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+
+const money = await getCollection('money');
+const matches = money.filter(p => 
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('bank') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('nre') ||
+  (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('nro')
+);
+---
+
+<html>
+  <head>
+    <title>NRE vs NRO Account Comparison</title>
+  </head>
+  <body>
+    <h1>NRE vs NRO Account Comparison</h1>
+    <p>Placeholder content. Related banking guides:</p>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/money/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>Check banking resources.</p>
+    )}
+  </body>
+</html>
