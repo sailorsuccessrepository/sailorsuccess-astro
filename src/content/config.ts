@@ -47,10 +47,17 @@ const tools = defineCollection({
   schema: articleSchema,
 });
 
+// NEW: Guides collection for step-by-step practical guides
+const guides = defineCollection({
+  type: 'content',
+  schema: articleSchema,
+});
+
 export const collections = {
   learn,
   careers,
   money,
   rights,
   tools,
+  guides,
 };
