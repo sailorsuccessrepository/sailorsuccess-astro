@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+
+const tools = await getCollection('tools');
+const matches = tools.filter(p => ((p.slug + ' ' + (p.data.title || '')).toLowerCase()).includes('career') || ((p.slug + ' ' + (p.data.title || '')).toLowerCase()).includes('assessment'));
+---
+
+<html>
+  <head>
+    <title>Career Assessment</title>
+  </head>
+  <body>
+    <h1>Career Assessment</h1>
+    <p>Placeholder page — no interactive tool yet. Related guides:</p>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/tools/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No matching tools found.</p>
+    )}
+  </body>
+</html>

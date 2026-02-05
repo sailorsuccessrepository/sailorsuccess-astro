@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+
+const collections = ['careers','learn','tools','money','rights'];
+let all = [];
+for (const c of collections) {
+  const posts = await getCollection(c);
+  all = all.concat(posts.map(p => ({...p, collection: c})));
+}
+
+const slugKey = 'join-merchant-navy-after-12th';
+const matches = all.filter(p => p.slug.includes(slugKey) || (p.data.title || '').toLowerCase().includes('join merchant navy'));
+---
+
+<html>
+  <head>
+    <title>Join Merchant Navy After 12th</title>
+  </head>
+  <body>
+    <h1>Join Merchant Navy After 12th</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/${post.collection}/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No direct article found. Try the site search.</p>
+    )}
+  </body>
+</html>

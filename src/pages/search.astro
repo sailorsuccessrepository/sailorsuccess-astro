@@ -91,10 +91,18 @@ import PagefindSearch from '../components/PagefindSearch.astro';
           const res = await fetch(`/api/search.json?q=${encodeURIComponent(term)}`);
           const data = await res.json();
           if (!data || data.length === 0) {
-            if (resultsEl) resultsEl.innerHTML = `<p class="text-sm text-gray-600">No results for "${term}".</p>`;
+            if (resultsEl) resultsEl.innerHTML = `\n              <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border">\n                <p class="text-lg font-semibold mb-2">No results found for "${term}".</p>\n                <p class="text-sm text-gray-600 mb-4">Try browsing the top categories:</p>\n                <div class=\"flex flex-wrap gap-2\">\n                  <a href=\"/careers/\" class=\"px-4 py-2 bg-blue-600 text-white rounded\">🧭 Careers</a>\n                  <a href=\"/learn/\" class=\"px-4 py-2 bg-green-600 text-white rounded\">📚 Learn</a>\n                  <a href=\"/money/\" class=\"px-4 py-2 bg-yellow-600 text-white rounded\">💰 Money</a>\n                  <a href=\"/rights/\" class=\"px-4 py-2 bg-purple-600 text-white rounded\">⚖️ Rights</a>\n                  <a href=\"/tools/\" class=\"px-4 py-2 bg-gray-600 text-white rounded\">🔧 Tools</a>\n                </div>\n              </div>`;
             return;
           }
-          if (resultsEl) resultsEl.innerHTML = data.map((r:any)=>`<div class="p-3 border rounded mb-3"><a class="font-semibold text-lg" href="/${r.collection}/${r.slug}/">${r.title}</a><div class="text-sm text-gray-500">${r.category||''}</div><p class="text-sm text-gray-700 mt-2">${r.excerpt||''}</p></div>`).join('');
+
+          // Render result cards
+          const html = data.map((r:any) => {
+            const category = r.category ? `<span class="text-xs font-medium text-gray-600 dark:text-gray-300">${r.category}</span>` : '';
+            const tags = (r.tags || []).slice(0,6).map((t:string) => `<a href="/search/?q=${encodeURIComponent(t)}" class="inline-block text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full mr-2 mb-2">${t}</a>`).join('');
+            return `\n              <article class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border mb-4">\n                <a href="/${r.collection}/${r.slug}/" class="no-underline">\n                  <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">${r.title || ''}</h3>\n                </a>\n                <div class="flex items-center gap-3 mb-2">${category}</div>\n                <p class="text-sm text-gray-600 dark:text-gray-300 mb-3 line-clamp-2">${r.excerpt || ''}</p>\n                <div class=\"flex flex-wrap\">${tags}</div>\n              </article>`;
+          }).join('');
+
+          if (resultsEl) resultsEl.innerHTML = html;
         }catch(e){
           if (resultsEl) resultsEl.innerHTML = '<p class="text-sm text-red-600">Search failed.</p>';
         }

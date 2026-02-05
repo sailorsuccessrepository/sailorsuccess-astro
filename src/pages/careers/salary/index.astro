@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+
+const careers = await getCollection('careers');
+const money = await getCollection('money');
+
+const candidates = [...careers, ...money];
+const matches = candidates.filter(p => {
+  const s = (p.slug + ' ' + (p.data.title || '')).toLowerCase();
+  return s.includes('salary');
+});
+---
+
+<html>
+  <head>
+    <title>Salary articles</title>
+  </head>
+  <body>
+    <h1>Salary</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li>
+            <a href={`/${post.collection || 'careers'}/${post.slug}`}>{post.data.title || post.slug}</a>
+            {post.data.description && <p>{post.data.description}</p>}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>No salary articles found yet.</p>
+    )}
+  </body>
+</html>

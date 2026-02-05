@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+
+const tools = await getCollection('tools');
+const matches = tools.filter(p => ((p.slug + ' ' + (p.data.title || '')).toLowerCase()).includes('sea') || ((p.slug + ' ' + (p.data.title || '')).toLowerCase()).includes('service'));
+---
+
+<html>
+  <head>
+    <title>Sea Service Calculator</title>
+  </head>
+  <body>
+    <h1>Sea Service Calculator</h1>
+    <p>This tool page is a placeholder. Below are related tools and guides.</p>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/tools/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No matching tool articles yet.</p>
+    )}
+  </body>
+</html>

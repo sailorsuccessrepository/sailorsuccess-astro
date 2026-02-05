@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+
+const collections = ['money','careers'];
+let all = [];
+for (const c of collections) {
+  const posts = await getCollection(c);
+  all = all.concat(posts.map(p => ({...p, collection: c})));
+}
+
+const slugKey = 'merchant-navy-salary-2026';
+const matches = all.filter(p => p.slug.includes('merchant-navy-salary') || (p.data.title || '').toLowerCase().includes('merchant navy salary'));
+---
+
+<html>
+  <head>
+    <title>Merchant Navy Salary 2026</title>
+  </head>
+  <body>
+    <h1>Merchant Navy Salary 2026</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/${post.collection}/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No direct salary article found. Try the salary section.</p>
+    )}
+  </body>
+</html>

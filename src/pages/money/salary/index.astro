@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+const money = await getCollection('money');
+const matches = money.filter(p => ((p.slug + ' ' + (p.data.title || '')).toLowerCase()).includes('salary'));
+---
+
+<html>
+  <head>
+    <title>Money - Salary</title>
+  </head>
+  <body>
+    <h1>Money: Salary</h1>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li>
+            <a href={`/money/${post.slug}`}>{post.data.title || post.slug}</a>
+            {post.data.description && <p>{post.data.description}</p>}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>No salary articles in money collection.</p>
+    )}
+  </body>
+</html>

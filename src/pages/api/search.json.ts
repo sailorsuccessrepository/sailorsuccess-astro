@@ -27,7 +27,8 @@ export const GET: APIRoute = async ({ request }) => {
     slug: p.slug,
     collection: p.collection,
     category: p.data.category,
-    excerpt: (p.data.description || '').toString().slice(0, 160)
+    excerpt: (p.data.description || '').toString().slice(0, 160),
+    tags: p.data.tags || []
   }));
 
   return new Response(JSON.stringify(results), { status: 200, headers: { 'Content-Type': 'application/json' } });

@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+
+const tools = await getCollection('tools');
+const matches = tools.filter(p => ((p.slug + ' ' + (p.data.title || '')).toLowerCase()).includes('salary'));
+---
+
+<html>
+  <head>
+    <title>Salary Calculator</title>
+  </head>
+  <body>
+    <h1>Salary Calculator</h1>
+    <p>Placeholder page — no calculator implemented. Related articles:</p>
+    {matches.length ? (
+      <ul>
+        {matches.map(post => (
+          <li><a href={`/tools/${post.slug}`}>{post.data.title || post.slug}</a></li>
+        ))}
+      </ul>
+    ) : (
+      <p>No direct tool articles found. See the salary guides.</p>
+    )}
+  </body>
+</html>

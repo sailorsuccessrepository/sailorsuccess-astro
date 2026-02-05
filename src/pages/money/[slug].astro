@@ -1,10 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-export async function getStaticPaths() {
-  const money = await getCollection('money');
-  return money.map(post => ({ params: { slug: post.slug }, props: { post } }));
-}
-const { getCollection } = await import('astro:content');
 import TagList from '../../components/TagList.astro';
 import RelatedArticles from '../../components/RelatedArticles.astro';
 import ContinueReading from '../../components/ContinueReading.astro';
