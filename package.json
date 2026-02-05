@@ -5,11 +5,12 @@
     "type": "module",
     "scripts": {
           "dev": "astro dev",
-          "build": "astro build",
+          "build": "astro build" && npx pagefind --site dist",
           "preview": "astro preview",
           "astro": "astro"
     },
     "dependencies": {
-          "astro": "^4.0.0"
+          "astro": "^4.0.0",
+    "@astrojs/pagefind": "^1.0.0"
     }
 }
