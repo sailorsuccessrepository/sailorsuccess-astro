@@ -1,3 +1,4 @@
+---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PagefindSearch from '../components/PagefindSearch.astro';
 ---
@@ -16,7 +17,17 @@ import PagefindSearch from '../components/PagefindSearch.astro';
       </p>
     </div>
 
-    <PagefindSearch />
+    <div class="max-w-3xl mx-auto">
+      <form id="search-form" method="get" class="mb-6">
+        <input id="search-input" name="q" placeholder="Search articles (title, description, tags)" class="w-full border rounded px-4 py-3" />
+      </form>
+
+      <div id="search-results" class="mt-4"></div>
+
+      <div id="search-fallback" class="mt-4">
+        <PagefindSearch />
+      </div>
+    </div>
 
     <div class="mt-12 max-w-3xl mx-auto">
       <h2 class="text-2xl font-bold mb-4 text-center">🔥 Popular Searches</h2>
@@ -49,15 +60,55 @@ import PagefindSearch from '../components/PagefindSearch.astro';
       const buttons = document.querySelectorAll('.popular-search');
       buttons.forEach(button => {
         button.addEventListener('click', () => {
-          const query = button.getAttribute('data-query');
-          const searchInput = document.querySelector('.pagefind-ui__search-input') as HTMLInputElement;
-          if (searchInput && query) {
-            searchInput.value = query;
-            searchInput.dispatchEvent(new Event('input', { bubbles: true }));
-            searchInput.focus();
+          const query = button.getAttribute('data-query') || '';
+          const input = document.getElementById('search-input') as HTMLInputElement | null;
+          if (input) {
+            input.value = query;
+            input.form?.dispatchEvent(new Event('submit', { bubbles: true }));
           }
         });
       });
     });
+
+    // Client-side search using server API
+    (function(){
+      const params = new URL(location.href).searchParams;
+      const q = params.get('q') || '';
+      const input = document.getElementById('search-input') as HTMLInputElement | null;
+      const resultsEl = document.getElementById('search-results') as HTMLElement | null;
+      const fallback = document.getElementById('search-fallback') as HTMLElement | null;
+      if (input) input.value = q;
+
+      async function doSearch(term: string){
+        if (!term) {
+          if (resultsEl) resultsEl.innerHTML = '';
+          if (fallback) fallback.style.display = '';
+          return;
+        }
+        if (fallback) fallback.style.display = 'none';
+        if (resultsEl) resultsEl.innerHTML = '<p class="text-sm text-gray-600">Searching…</p>';
+        try{
+          const res = await fetch(`/api/search.json?q=${encodeURIComponent(term)}`);
+          const data = await res.json();
+          if (!data || data.length === 0) {
+            if (resultsEl) resultsEl.innerHTML = `<p class="text-sm text-gray-600">No results for "${term}".</p>`;
+            return;
+          }
+          if (resultsEl) resultsEl.innerHTML = data.map((r:any)=>`<div class="p-3 border rounded mb-3"><a class="font-semibold text-lg" href="/${r.collection}/${r.slug}/">${r.title}</a><div class="text-sm text-gray-500">${r.category||''}</div><p class="text-sm text-gray-700 mt-2">${r.excerpt||''}</p></div>`).join('');
+        }catch(e){
+          if (resultsEl) resultsEl.innerHTML = '<p class="text-sm text-red-600">Search failed.</p>';
+        }
+      }
+
+      const form = document.getElementById('search-form') as HTMLFormElement | null;
+      form?.addEventListener('submit', (ev)=>{
+        ev.preventDefault();
+        const term = (document.getElementById('search-input') as HTMLInputElement).value.trim();
+        history.replaceState({}, '', `/search/?q=${encodeURIComponent(term)}`);
+        doSearch(term);
+      });
+
+      if (q) doSearch(q);
+    })();
   </script>
 </BaseLayout>

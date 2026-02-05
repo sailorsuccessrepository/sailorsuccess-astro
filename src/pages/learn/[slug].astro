@@ -1,28 +1,78 @@
 ---
 import { getCollection } from 'astro:content';
+import TagList from '../../components/TagList.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
+import ContinueReading from '../../components/ContinueReading.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
   const learn = await getCollection('learn');
-    return learn.map(post => ({
-        params: { slug: post.slug },
-            props: { post },
-              }));
-              }
+  return learn.map(post => ({ params: { slug: post.slug }, props: { post } }));
+}
 
-              interface Props {
-                post: any;
-                }
+interface Props { post: any }
+const { post } = Astro.props as Props;
+const { Content } = await post.render();
 
-                const { post } = Astro.props;
-                const { Content } = await post.render();
-                ---
+const collections = ['learn','careers','money','rights','tools'];
+let allPosts: any[] = [];
+for (const c of collections) {
+  const cposts = await getCollection(c);
+  allPosts = allPosts.concat(cposts.map(p => ({ ...p, collection: c })));
+}
+const pool = allPosts.filter(p => p.slug !== post.slug && !p.data.draft);
 
-                <html>
-                  <head>
-                      <title>{post.data.title}</title>
-                        </head>
-                          <body>
-                              <h1>{post.data.title}</h1>
-                                  <Content />
-                                    </body>
-                                    </html>
+function tagOverlap(a = [], b = []) { return a.filter((t: string) => b.includes(t)).length; }
+
+// 1) Same category
+let selected: any[] = [];
+const sameCategory = pool.filter(p => p.data.category === post.data.category);
+for (const p of sameCategory) {
+  if (selected.length >= 5) break;
+  selected.push(p);
+}
+
+// 2) Tag overlap (exclude already selected)
+const tagMatches = pool
+  .filter(p => !selected.includes(p))
+  .map(p => ({ p, overlap: tagOverlap(p.data.tags || [], post.data.tags || []) }))
+  .filter(x => x.overlap > 0)
+  .sort((a, b) => b.overlap - a.overlap)
+  .map(x => x.p);
+for (const p of tagMatches) {
+  if (selected.length >= 5) break;
+  if (!selected.includes(p)) selected.push(p);
+}
+
+// 3) Recent fallback
+const recent = pool.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+for (const p of recent) {
+  if (selected.length >= 5) break;
+  if (!selected.includes(p)) selected.push(p);
+}
+
+const related = selected.slice(0, 5);
+
+// Continue reading: 3 more articles not in sidebar (prefer tag matches then recent)
+const continueCandidates = [...tagMatches, ...recent].filter((p, i, arr) => arr.indexOf(p) === i && !related.includes(p));
+const continueReading = continueCandidates.slice(0, 3);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <div class="max-w-6xl mx-auto px-4 py-8 md:flex md:gap-8">
+    <main class="flex-1">
+      <h1 class="text-3xl font-bold mb-4">{post.data.title}</h1>
+      <div class="prose dark:prose-invert">
+        <Content />
+      </div>
+
+      <TagList tags={post.data.tags || []} />
+
+      <ContinueReading articles={continueReading} />
+    </main>
+
+    <aside class="hidden md:block md:w-72">
+      <RelatedArticles articles={related} />
+    </aside>
+  </div>
+</BaseLayout>

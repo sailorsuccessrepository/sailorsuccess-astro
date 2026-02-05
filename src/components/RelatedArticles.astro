@@ -1,0 +1,28 @@
+---
+export interface Article {
+  slug: string;
+  collection: string;
+  data: any;
+}
+
+export interface Props {
+  articles: Article[];
+  heading?: string;
+}
+
+const { articles, heading = 'Related Articles' } = Astro.props as Props;
+---
+
+<aside class="w-full md:w-72">
+  <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">{heading}</h3>
+  <ul class="space-y-3">
+    {articles.map(a => (
+      <li>
+        <a href={`/${a.collection}/${a.slug}/`} class="block hover:bg-gray-50 dark:hover:bg-gray-900 p-2 rounded">
+          <div class="text-sm font-medium text-gray-900 dark:text-gray-100">{a.data.title}</div>
+          <div class="text-xs text-gray-500 dark:text-gray-400">{new Date(a.data.pubDate).toLocaleDateString()}</div>
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>
