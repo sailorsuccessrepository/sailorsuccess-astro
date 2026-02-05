@@ -1,16 +1,17 @@
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
+import pagefind from '@astrojs/pagefind';
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://sailorsuccess.online',
+  integrations: [
+    tailwind(),
+    sitemap(),
+    pagefind()
+  ],
   output: 'static',
   build: {
-    format: 'file',
-  },
-  markdown: {
-    shikiConfig: {
-      theme: 'github-dark',
-      wrap: true,
-    },
-  },
+    format: 'directory'
+  }
 });
