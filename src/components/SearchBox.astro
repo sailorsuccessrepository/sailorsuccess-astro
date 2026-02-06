@@ -5,7 +5,7 @@
   <input 
     type="text" 
     id="search-input" 
-    class="search-input"
+    class="search-input px-3 py-2 rounded border border-gray-200 dark:border-gray-700 text-sm w-52 outline-none"
     placeholder="Search articles..."
     aria-label="Search articles"
   />
@@ -31,7 +31,7 @@
         const res = await fetch('/api/search.json?q=');
         cache = await res.json();
       } catch (err) {
-        resultsDiv.innerHTML = '<p style="color: red;">Search unavailable</p>';
+        resultsDiv.innerHTML = '<p class="p-2 text-red-500">Search unavailable</p>';
         return;
       }
     }
@@ -46,12 +46,12 @@
     
     // Render results
     if (results.length === 0) {
-      resultsDiv.innerHTML = '<p style="padding: 0.5rem; color: #999;">No results</p>';
+      resultsDiv.innerHTML = '<p class="p-2 text-gray-500 dark:text-gray-400">No results</p>';
     } else {
       resultsDiv.innerHTML = results.map((r: any) => `
-        <a href="/${r.collection}/${r.slug}" class="search-result-item">
-          <div style="font-weight: 500; color: #0066cc;">${r.title}</div>
-          <div style="font-size: 0.85rem; color: #666;">${r.excerpt || r.category}</div>
+        <a href="/${r.collection}/${r.slug}" class="search-result-item block p-3 border-b last:border-b-0 hover:bg-gray-100 dark:hover:bg-gray-700 no-underline">
+          <div class="font-medium text-blue-600 dark:text-blue-400">${r.title}</div>
+          <div class="text-sm text-gray-600 dark:text-gray-300">${r.excerpt || r.category}</div>
         </a>
       `).join('');
     }
@@ -78,48 +78,24 @@
     position: relative;
     margin: 0 1rem;
   }
-  
+
   .search-input {
-    padding: 0.5rem 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
     font-size: 0.9rem;
-    width: 200px;
-    outline: none;
   }
-  
-  .search-input:focus {
-    border-color: #0066cc;
-    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
-  }
-  
+
   .search-results {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
-    border: 1px solid #ddd;
-    border-top: none;
-    border-radius: 0 0 4px 4px;
     max-height: 300px;
     overflow-y: auto;
     z-index: 1000;
   }
-  
+
   .search-result-item {
     display: block;
-    padding: 0.75rem;
-    border-bottom: 1px solid #eee;
-    text-decoration: none;
     transition: background 0.15s;
-  }
-  
-  .search-result-item:last-child {
-    border-bottom: none;
-  }
-  
-  .search-result-item:hover {
-    background: #f5f5f5;
+    text-decoration: none;
   }
 </style>

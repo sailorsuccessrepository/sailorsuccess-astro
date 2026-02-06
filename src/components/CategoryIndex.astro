@@ -18,20 +18,20 @@ const sorted = filtered.filter(p => !p.data.draft).sort((a, b) =>
 ---
 
 <div class="category-index">
-  <h1>{title}</h1>
-  {intro && <p class="intro">{intro}</p>}
+  <h1 class="text-2xl font-semibold mb-4">{title}</h1>
+  {intro && <p class="intro text-gray-600 dark:text-gray-300">{intro}</p>}
   
   {sorted.length > 0 ? (
-    <div class="articles-list">
+    <div class="articles-list grid gap-6">
       {sorted.map(post => (
-        <div class="article-item">
-          <h3>
-            <a href={`/${collection}/${post.slug}`}>{post.data.title}</a>
+        <div class="article-item border border-gray-200 dark:border-gray-700 p-6 rounded-lg transition-shadow">
+          <h3 class="mb-1">
+            <a class="text-blue-600 dark:text-blue-400 hover:underline" href={`/${collection}/${post.slug}`}>{post.data.title}</a>
           </h3>
           {post.data.description && (
-            <p class="description">{post.data.description}</p>
+            <p class="description text-gray-700 dark:text-gray-300">{post.data.description}</p>
           )}
-          <div class="meta">
+          <div class="meta mt-3 flex gap-4 text-sm text-gray-500 dark:text-gray-400">
             <span class="date">{post.data.pubDate?.toLocaleDateString()}</span>
             {post.data.readTime && <span class="readtime">{post.data.readTime} min read</span>}
           </div>
@@ -39,7 +39,7 @@ const sorted = filtered.filter(p => !p.data.draft).sort((a, b) =>
       ))}
     </div>
   ) : (
-    <p>No articles found in this section yet.</p>
+    <p class="text-gray-600 dark:text-gray-400">No articles found in this section yet.</p>
   )}
 </div>
 
@@ -49,51 +49,26 @@ const sorted = filtered.filter(p => !p.data.draft).sort((a, b) =>
     margin-bottom: 1rem;
   }
   
-  .intro {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: #666;
-  }
-  
   .articles-list {
     display: grid;
     gap: 1.5rem;
   }
   
   .article-item {
-    border: 1px solid #ddd;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
     transition: box-shadow 0.2s;
   }
   
   .article-item:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   }
   
   .article-item h3 {
     margin: 0 0 0.5rem 0;
   }
   
-  .article-item a {
-    color: #0066cc;
-    text-decoration: none;
-  }
-  
-  .article-item a:hover {
-    text-decoration: underline;
-  }
-  
   .description {
-    color: #555;
     font-size: 0.95rem;
     margin: 0.5rem 0;
   }
   
-  .meta {
-    font-size: 0.85rem;
-    color: #999;
-    display: flex;
-    gap: 1rem;
-  }
 </style>
