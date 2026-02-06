@@ -1,38 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
-
-const rights = await getCollection('rights');
-
-// Group by subcategory
-const grouped = rights.reduce((acc, post) => {
-  const subcategory = post.data.subcategory || 'General';
-  if (!acc[subcategory]) acc[subcategory] = [];
-  acc[subcategory].push(post);
-  return acc;
-}, {} as Record<string, any[]>);
+import CategoryIndex from '../../components/CategoryIndex.astro';
 ---
 
 <html>
-<head>
-  <title>Rights & Welfare - Sailor Success</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-  <h1>Rights & Welfare</h1>
-  
-  {Object.entries(grouped).map(([subcategory, posts]) => (
-    <section>
-      <h2>{subcategory}</h2>
-      <ul>
-        {posts.map(post => (
-          <li>
-            <a href={`/rights/${post.slug}`}>{post.data.title}</a>
-            {post.data.description && <p>{post.data.description}</p>}
-          </li>
-        ))}
-      </ul>
-    </section>
-  ))}
-</body>
+  <head>
+    <title>Rights & Welfare - Sailor Success</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <main style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+      <CategoryIndex 
+        title="Know Your Rights" 
+        intro="Understand your legal protections, contracts, harassment policies, and mental health support as a seafarer."
+        collection="rights"
+      />
+    </main>
+  </body>
 </html>

@@ -1,0 +1,99 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  title: string;
+  intro?: string;
+  collection: 'learn' | 'careers' | 'money' | 'rights' | 'tools';
+  filterFn?: (item: any) => boolean;
+}
+
+const { title, intro, collection, filterFn } = Astro.props;
+
+const items = await getCollection(collection);
+const filtered = filterFn ? items.filter(filterFn) : items;
+const sorted = filtered.filter(p => !p.data.draft).sort((a, b) => 
+  (b.data.pubDate?.valueOf() || 0) - (a.data.pubDate?.valueOf() || 0)
+);
+---
+
+<div class="category-index">
+  <h1>{title}</h1>
+  {intro && <p class="intro">{intro}</p>}
+  
+  {sorted.length > 0 ? (
+    <div class="articles-list">
+      {sorted.map(post => (
+        <div class="article-item">
+          <h3>
+            <a href={`/${collection}/${post.slug}`}>{post.data.title}</a>
+          </h3>
+          {post.data.description && (
+            <p class="description">{post.data.description}</p>
+          )}
+          <div class="meta">
+            <span class="date">{post.data.pubDate?.toLocaleDateString()}</span>
+            {post.data.readTime && <span class="readtime">{post.data.readTime} min read</span>}
+          </div>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <p>No articles found in this section yet.</p>
+  )}
+</div>
+
+<style>
+  .category-index h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #666;
+  }
+  
+  .articles-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .article-item {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: box-shadow 0.2s;
+  }
+  
+  .article-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .article-item h3 {
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .article-item a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .article-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .description {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+  }
+  
+  .meta {
+    font-size: 0.85rem;
+    color: #999;
+    display: flex;
+    gap: 1rem;
+  }
+</style>
