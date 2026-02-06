@@ -1,0 +1,6 @@
+---
+import { getCollection } from 'astro:content';
+const tools = await getCollection('tools');
+const matches = tools.filter(p => (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('guide') || (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('interview'));
+---
+<html><head><title>Guides & Resources</title></head><body><h1>Guides & Resources</h1>{matches.length ? <ul>{matches.map(p => <li><a href={`/tools/${p.slug}`}>{p.data.title || p.slug}</a></li>)}</ul> : <p>No guides found.</p>}</body></html>

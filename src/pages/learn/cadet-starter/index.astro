@@ -1,0 +1,6 @@
+---
+import { getCollection } from 'astro:content';
+const learn = await getCollection('learn');
+const matches = learn.filter(p => (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('cadet'));
+---
+<html><head><title>Cadet Starter</title></head><body><h1>Cadet Starter</h1>{matches.length ? <ul>{matches.map(p => <li><a href={`/learn/${p.slug}`}>{p.data.title || p.slug}</a></li>)}</ul> : <p>No cadet guides found.</p>}</body></html>

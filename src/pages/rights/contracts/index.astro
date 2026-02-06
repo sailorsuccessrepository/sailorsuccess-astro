@@ -1,0 +1,6 @@
+---
+import { getCollection } from 'astro:content';
+const rights = await getCollection('rights');
+const matches = rights.filter(p => (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('contract'));
+---
+<html><head><title>Seafarer Contracts</title></head><body><h1>Seafarer Contracts</h1>{matches.length ? <ul>{matches.map(p => <li><a href={`/rights/${p.slug}`}>{p.data.title || p.slug}</a></li>)}</ul> : <p>No guides found.</p>}</body></html>

@@ -1,0 +1,6 @@
+---
+import { getCollection } from 'astro:content';
+const rights = await getCollection('rights');
+const matches = rights.filter(p => (p.slug + ' ' + (p.data.title || '')).toLowerCase().includes('problem') || (p.slug).includes('issue'));
+---
+<html><head><title>Problems & Disputes</title></head><body><h1>Problems & Disputes</h1>{matches.length ? <ul>{matches.map(p => <li><a href={`/rights/${p.slug}`}>{p.data.title || p.slug}</a></li>)}</ul> : <p>No guides found.</p>}</body></html>
