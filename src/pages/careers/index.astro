@@ -1,20 +1,17 @@
 ---
+import Layout from '../../layouts/Layout.astro';
 import CategoryIndex from '../../components/CategoryIndex.astro';
 ---
 
-<html>
-  <head>
-    <title>Career Guides - Sailor Success</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <main style="max-width: 900px; margin: 0 auto; padding: 2rem;">
-      <CategoryIndex 
-        title="Career Guides" 
-        intro="Explore comprehensive guides on merchant navy careers, training paths, and opportunities."
-        collection="careers"
-      />
-    </main>
-  </body>
-</html>
+<Layout
+  title="Career Guides - Sailor Success"
+  description="Explore comprehensive guides on merchant navy careers, training paths, and opportunities."
+>
+  <main class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+    <CategoryIndex 
+      title="Career Guides" 
+      intro="Explore comprehensive guides on merchant navy careers, training paths, and opportunities. From joining as a cadet to reaching master rank, find everything you need to succeed."
+      collection="careers"
+    />
+  </main>
+</Layout>

@@ -1,20 +1,17 @@
 ---
+import Layout from '../../layouts/Layout.astro';
 import CategoryIndex from '../../components/CategoryIndex.astro';
 ---
 
-<html>
-  <head>
-    <title>Tools & Resources - Sailor Success</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <main style="max-width: 900px; margin: 0 auto; padding: 2rem;">
-      <CategoryIndex 
-        title="Tools & Resources" 
-        intro="Practical tools for interviews, resumes, sea service calculations, and professional assessments."
-        collection="tools"
-      />
-    </main>
-  </body>
-</html>
+<Layout
+  title="Seafarer Tools & Resources - Sailor Success"
+  description="Practical calculators, resume templates, guides, and interview preparation for seafarers."
+>
+  <main class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+    <CategoryIndex 
+      title="Seafarer Tools & Resources" 
+      intro="Practical calculators, resume templates, guides, and interview preparation for seafarers. Get tools to calculate sea service, optimize resumes, and ace interviews."
+      collection="tools"
+    />
+  </main>
+</Layout>

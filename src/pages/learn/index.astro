@@ -1,20 +1,17 @@
 ---
+import Layout from '../../layouts/Layout.astro';
 import CategoryIndex from '../../components/CategoryIndex.astro';
 ---
 
-<html>
-  <head>
-    <title>Learn Maritime - Sailor Success</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <main style="max-width: 900px; margin: 0 auto; padding: 2rem;">
-      <CategoryIndex 
-        title="Learning Resources" 
-        intro="Master maritime knowledge: ship operations, safety, exams, and professional skills."
-        collection="learn"
-      />
-    </main>
-  </body>
-</html>
+<Layout
+  title="Learn Maritime - Sailor Success"
+  description="Master maritime knowledge: ship operations, safety, exams, and professional skills."
+>
+  <main class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+    <CategoryIndex 
+      title="Learning Resources" 
+      intro="Master maritime knowledge: ship operations, safety, exams, and professional skills. From STCW courses to ship systems, fuel your maritime education."
+      collection="learn"
+    />
+  </main>
+</Layout>

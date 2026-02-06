@@ -1,20 +1,17 @@
 ---
+import Layout from '../../layouts/Layout.astro';
 import CategoryIndex from '../../components/CategoryIndex.astro';
 ---
 
-<html>
-  <head>
-    <title>Money & Finance - Sailor Success</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <main style="max-width: 900px; margin: 0 auto; padding: 2rem;">
-      <CategoryIndex 
-        title="Money & Finance Guides" 
-        intro="Guides on salaries, savings, investments, taxes, and financial planning for seafarers."
-        collection="money"
-      />
-    </main>
-  </body>
-</html>
+<Layout
+  title="Money & Finance - Sailor Success"
+  description="Manage your finances at sea: salary structures, banking, investments, insurance, and tax planning."
+>
+  <main class="max-w-7xl mx-auto px-4 py-12 md:py-16">
+    <CategoryIndex 
+      title="Money & Finance" 
+      intro="Manage your finances at sea: salary structures, banking, investments, insurance, and tax planning. Maximize earnings, minimize taxes, and build wealth while at sea."
+      collection="money"
+    />
+  </main>
+</Layout>

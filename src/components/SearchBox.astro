@@ -76,26 +76,94 @@
 <style>
   .search-box {
     position: relative;
-    margin: 0 1rem;
+    width: 100%;
+    max-width: 320px;
   }
 
   .search-input {
-    font-size: 0.9rem;
+    width: 100%;
+    font-size: 0.95rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(229, 231, 235);
+    padding: 0.6rem 1rem;
+    transition: all 0.2s;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: rgb(59, 130, 246);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  .dark .search-input {
+    background-color: rgb(31, 41, 55);
+    border-color: rgb(55, 65, 81);
+    color: white;
+  }
+
+  .dark .search-input::placeholder {
+    color: rgb(107, 114, 128);
   }
 
   .search-results {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 0.5rem);
     left: 0;
     right: 0;
-    max-height: 300px;
+    max-height: 400px;
     overflow-y: auto;
     z-index: 1000;
+    background: white;
+    border: 2px solid rgb(229, 231, 235);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .search-results {
+    background-color: rgb(31, 41, 55);
+    border-color: rgb(55, 65, 81);
   }
 
   .search-result-item {
     display: block;
     transition: background 0.15s;
     text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgb(243, 244, 246);
+  }
+
+  .dark .search-result-item {
+    border-bottom-color: rgb(55, 65, 81);
+  }
+
+  .search-result-item:hover {
+    background-color: rgb(249, 250, 251);
+  }
+
+  .dark .search-result-item:hover {
+    background-color: rgb(55, 65, 81);
+  }
+
+  .search-result-item:last-child {
+    border-bottom: none;
+  }
+
+  .search-result-item div:first-child {
+    font-weight: 600;
+    color: rgb(59, 130, 246);
+  }
+
+  .dark .search-result-item div:first-child {
+    color: rgb(96, 165, 250);
+  }
+
+  .search-result-item div:last-child {
+    font-size: 0.875rem;
+    color: rgb(107, 114, 128);
+    margin-top: 0.25rem;
+  }
+
+  .dark .search-result-item div:last-child {
+    color: rgb(156, 163, 175);
   }
 </style>
